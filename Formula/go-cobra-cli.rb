@@ -5,7 +5,7 @@
 class GoCobraCli < Formula
   desc "Example CLI Template"
   homepage "https://github.com/iac-factory/go-cobra-cli"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   depends_on "bash" => :optional
@@ -16,8 +16,8 @@ class GoCobraCli < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.7/go-cobra-cli-darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7f96f2e34652e78d506eaf088746c84de264af5d1bdab1303fecc789e2208803"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.8/go-cobra-cli-darwin-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "2191744f9c4dbd1315bddb3a8a7db7a3bfd77a386320742184d0f04be42694e5"
 
       def install
         ENV["GOPATH"] = buildpath
@@ -33,8 +33,8 @@ class GoCobraCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.7/go-cobra-cli-darwin-x86-64.tar.gz", using: CurlDownloadStrategy
-      sha256 "09aa80d48d84802f843c775a7a2977cd2b7677b8c51b8b6ce813bf9ca2d6df3e"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.8/go-cobra-cli-darwin-x86-64.tar.gz", using: CurlDownloadStrategy
+      sha256 "6135299a04aa6c63acb664dbc85499183a313ac0965e90729b56f6adc61b07e2"
 
       def install
         ENV["GOPATH"] = buildpath
@@ -53,8 +53,8 @@ class GoCobraCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.7/go-cobra-cli-linux-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "18cc9198a7de1e8c42db9a16011c783835448ac61ceaedf5f411e32ffe70ab76"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.8/go-cobra-cli-linux-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "28970a30b83cec0212b194a86048ea5d41ecf30b28b6f4b6a97a31930b4f95bb"
 
       def install
         ENV["GOPATH"] = buildpath
@@ -70,8 +70,8 @@ class GoCobraCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.7/go-cobra-cli-linux-x86-64.tar.gz", using: CurlDownloadStrategy
-      sha256 "054931405c0ab1d986cb6a1d63901b41305f4d3986964fd7f9f2b443ddbe6ff3"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.8/go-cobra-cli-linux-x86-64.tar.gz", using: CurlDownloadStrategy
+      sha256 "0668661189acd9ea4c61d18f3cfbb82bc39892e6d27952bdb5b9be11f29971db"
 
       def install
         ENV["GOPATH"] = buildpath
