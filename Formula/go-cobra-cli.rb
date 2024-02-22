@@ -5,7 +5,7 @@
 class GoCobraCli < Formula
   desc "Example CLI Template"
   homepage "https://github.com/iac-factory/go-cobra-cli"
-  version "0.0.8"
+  version "0.0.9"
   license "MIT"
 
   depends_on "bash" => :optional
@@ -16,74 +16,38 @@ class GoCobraCli < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.8/go-cobra-cli-darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2191744f9c4dbd1315bddb3a8a7db7a3bfd77a386320742184d0f04be42694e5"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.9/go-cobra-cli-darwin-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "5061b2ea1bb86591f6a6689f9aea47e3614398cdcb4aa12ec2c653f2d71bd631"
 
       def install
-        ENV["GOPATH"] = buildpath
-        # bin_path = buildpath/"src/gitlab.com:ethrgg/templates/go-cobra-cli"
-        bin_path = buildpath/"src/github.com:iac-factory/go-cobra-cli"
-        bin_path.install Dir["*"]
-        cd bin_path do
-            system "go", "build", "-o", bin/"go-cobra-cli", "."
-        end
-
-        # bash_completion.install "completions/foo.bash" => "foo"
-        # ...
+        bin.install "go-cobra-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.8/go-cobra-cli-darwin-x86-64.tar.gz", using: CurlDownloadStrategy
-      sha256 "6135299a04aa6c63acb664dbc85499183a313ac0965e90729b56f6adc61b07e2"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.9/go-cobra-cli-darwin-x86-64.tar.gz", using: CurlDownloadStrategy
+      sha256 "afcd250c3c98d0acda7c1a87ff73d6fb13ca54017e5121af87a9915a62f01dc6"
 
       def install
-        ENV["GOPATH"] = buildpath
-        # bin_path = buildpath/"src/gitlab.com:ethrgg/templates/go-cobra-cli"
-        bin_path = buildpath/"src/github.com:iac-factory/go-cobra-cli"
-        bin_path.install Dir["*"]
-        cd bin_path do
-            system "go", "build", "-o", bin/"go-cobra-cli", "."
-        end
-
-        # bash_completion.install "completions/foo.bash" => "foo"
-        # ...
+        bin.install "go-cobra-cli"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.8/go-cobra-cli-linux-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "28970a30b83cec0212b194a86048ea5d41ecf30b28b6f4b6a97a31930b4f95bb"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.9/go-cobra-cli-linux-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "de19b586cfb6470617f2e1a8f5c354f041d06c8e53bd824a321c26e734a9dbb2"
 
       def install
-        ENV["GOPATH"] = buildpath
-        # bin_path = buildpath/"src/gitlab.com:ethrgg/templates/go-cobra-cli"
-        bin_path = buildpath/"src/github.com:iac-factory/go-cobra-cli"
-        bin_path.install Dir["*"]
-        cd bin_path do
-            system "go", "build", "-o", bin/"go-cobra-cli", "."
-        end
-
-        # bash_completion.install "completions/foo.bash" => "foo"
-        # ...
+        bin.install "go-cobra-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.8/go-cobra-cli-linux-x86-64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0668661189acd9ea4c61d18f3cfbb82bc39892e6d27952bdb5b9be11f29971db"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.0.9/go-cobra-cli-linux-x86-64.tar.gz", using: CurlDownloadStrategy
+      sha256 "a96a0c24364f6f8d885e5148aac2b1cd7a23a958712d0df1bdb96e1648ced45c"
 
       def install
-        ENV["GOPATH"] = buildpath
-        # bin_path = buildpath/"src/gitlab.com:ethrgg/templates/go-cobra-cli"
-        bin_path = buildpath/"src/github.com:iac-factory/go-cobra-cli"
-        bin_path.install Dir["*"]
-        cd bin_path do
-            system "go", "build", "-o", bin/"go-cobra-cli", "."
-        end
-
-        # bash_completion.install "completions/foo.bash" => "foo"
-        # ...
+        bin.install "go-cobra-cli"
       end
     end
   end
