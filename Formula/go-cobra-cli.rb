@@ -5,7 +5,7 @@
 class GoCobraCli < Formula
   desc "Example CLI Template"
   homepage "https://github.com/iac-factory/go-cobra-cli"
-  version "0.2.3"
+  version "0.2.4"
   license "MIT"
 
   depends_on "bash" => :optional
@@ -15,16 +15,16 @@ class GoCobraCli < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.2.3/go-cobra-cli-darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2bc619bc183190d90f03fb5236284d278aac3d5746483198495bcab0d75a843d"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.2.4/go-cobra-cli-darwin-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "38255d500d0206a61c4787b360c777f9d58b1a8e91342666141d6500bb0a6dc9"
 
       def install
         bin.install "go-cobra-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.2.3/go-cobra-cli-darwin-x86-64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c431bfead47b047ea19fbc1ba1096629d347dc8f61830330afee4fbf70a62979"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.2.4/go-cobra-cli-darwin-x86-64.tar.gz", using: CurlDownloadStrategy
+      sha256 "36c5a8d31d0222c6813e60db8581ee5df2af5c6641fc9c7a386ca537b51156ee"
 
       def install
         bin.install "go-cobra-cli"
@@ -34,16 +34,16 @@ class GoCobraCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.2.3/go-cobra-cli-linux-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "cfee8d4918daea578ef9fcc04c76d1b43ecc9fb823931fc5bf062bda7d10cf9d"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.2.4/go-cobra-cli-linux-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e5523bed791eb6e5fdcbf4cc6beada2f753fa7269e5e800323202efedaf5ece5"
 
       def install
         bin.install "go-cobra-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.2.3/go-cobra-cli-linux-x86-64.tar.gz", using: CurlDownloadStrategy
-      sha256 "40076bd8b51c769b165777f093f2893ff66b6a64fc29441487a52a25b46c1fdc"
+      url "https://github.com/iac-factory/go-cobra-cli/releases/download/v0.2.4/go-cobra-cli-linux-x86-64.tar.gz", using: CurlDownloadStrategy
+      sha256 "4fa9455e2f765fd59af6db32fd1ec454d5a9d44d70e198b08a0b4f0375a6ad17"
 
       def install
         bin.install "go-cobra-cli"
