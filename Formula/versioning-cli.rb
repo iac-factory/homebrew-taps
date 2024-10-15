@@ -5,7 +5,7 @@
 class VersioningCli < Formula
   desc "Versioning Utilities CLI"
   homepage "https://github.com/iac-factory/versioning-cli"
-  version "0.1.10"
+  version "0.1.11"
   license "MIT"
 
   depends_on "bash" => :optional
@@ -15,16 +15,16 @@ class VersioningCli < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/iac-factory/versioning-cli/releases/download/v0.1.10/versioning-cli-darwin-x86-64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0ceb20946ea48a4401c0375420566cd0faf1f3b9cacdaab66551c09eab368bb5"
+      url "https://github.com/iac-factory/versioning-cli/releases/download/v0.1.11/versioning-cli-darwin-x86-64.tar.gz", using: CurlDownloadStrategy
+      sha256 "29034bd61f26864dc6be97050d45df94822571d8c5bb7ceb16872d0f4232b6bc"
 
       def install
         bin.install "versioning-cli"
       end
     end
     on_arm do
-      url "https://github.com/iac-factory/versioning-cli/releases/download/v0.1.10/versioning-cli-darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "556f72bfe6f58305132ee90cc5d68629f02472a057e212998765910c9e29177d"
+      url "https://github.com/iac-factory/versioning-cli/releases/download/v0.1.11/versioning-cli-darwin-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "750c0235c05c69c49dc881e90881974d15d34a821cf9d54ed11bec5e147b110b"
 
       def install
         bin.install "versioning-cli"
@@ -35,8 +35,8 @@ class VersioningCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/iac-factory/versioning-cli/releases/download/v0.1.10/versioning-cli-linux-x86-64.tar.gz", using: CurlDownloadStrategy
-        sha256 "a3b92509211843d7d4d41c581f79a9702b60d9ff70ecc27ce6fa37cccfd1c2fd"
+        url "https://github.com/iac-factory/versioning-cli/releases/download/v0.1.11/versioning-cli-linux-x86-64.tar.gz", using: CurlDownloadStrategy
+        sha256 "cc2ceb1d4b518f864a3e5632f56273ae2609d5243329c296ebe155a8271f7852"
 
         def install
           bin.install "versioning-cli"
@@ -45,8 +45,8 @@ class VersioningCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/iac-factory/versioning-cli/releases/download/v0.1.10/versioning-cli-linux-arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "6c356104ec8153365521a062ab707a9dde0524c7debd12d589351685e78c8751"
+        url "https://github.com/iac-factory/versioning-cli/releases/download/v0.1.11/versioning-cli-linux-arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "197b9c27316cedbebb3e2536c9f53ca0783d6d1429120ebf02c5a1b3b144c5a3"
 
         def install
           bin.install "versioning-cli"
